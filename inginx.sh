@@ -19,6 +19,7 @@ apt-get install php5-fpm -y
 apt-get install -y php5-mysql php5-curl php5-gd php5-intl php-pear php5-imagick php5-imap php5-mcrypt php5-ming php5-ps php5-pspell php5-recode php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl
 service nginx start
 mkdir /home/vh/
+sudo chmod -R 755 /home/vh/
 
 
 perl -i -pe 's/.*/	keepalive_timeout 2;/ if $.==19' /etc/nginx/nginx.conf
