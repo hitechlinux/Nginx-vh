@@ -40,6 +40,7 @@ server {
 	}
 
 	location ~ \.php$ {
+	        try_files $uri $uri/ =404;
 		fastcgi_split_path_info ^(.+\.php)(/.+)$;
 		fastcgi_pass 127.0.0.1:9000;
 		fastcgi_index index.php;
