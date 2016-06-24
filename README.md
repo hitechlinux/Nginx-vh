@@ -27,8 +27,8 @@ How To Use.
    
    $ `./vh.sh mydomain.com`
 
-After This. you can find your domain file into  **/etc/nginx/sites-available/ **
+After This. you can find your domain file into  **/etc/nginx/sites-available/**
 
-Find Where Is Your domain name open it with **`nano`** and Delete all **`#`**
+Find Where Is Your domain name open it with **`nano`** and Delete all "`#`" . NOT CONFIGS ONLY "`#`"
 
 Open a terminal and write **`nginx -t`** if all is ok. **`service nginx reload`**
