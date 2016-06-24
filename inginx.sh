@@ -48,8 +48,11 @@ perl -i -pe 's/.*/cgi.fix_pathinfo=0/ if $.==768' /etc/php5/fpm/php.ini
 perl -i -pe 's/.*/listen = 127.0.0.1:9000/ if $.==33' /etc/php5/fpm/pool.d/www.conf
 service php5-fpm reload
 service nginx restart
+echo "*****************************************************************"
 nginx -t
+
+echo "*****************************************************************"
 echo "Nginx Instalation Is Done."
 echo "Nginx Default html file is /usr/share/nginx/html/index.html"
 echo "Host Your First Domain With Command ./vh.sh yourdomain.com"
-
+echo "*****************************************************************"
