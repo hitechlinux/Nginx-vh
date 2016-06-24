@@ -18,8 +18,12 @@ server {
 	index index.php index.html index.htm;
 	server_name $1 www.$1;
 
+    location / {
+            try_files $uri $uri/ =404;
+    }
+
 	location ~ \.php$ {
-        try_files $uri =404;
+        try_files $uri $uri/ =404;
 		fastcgi_split_path_info ^(.+\.php)(/.+)$;
 		fastcgi_pass 127.0.0.1:9000;
 		fastcgi_index index.php;
